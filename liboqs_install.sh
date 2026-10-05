@@ -6,7 +6,7 @@ cmake -S liboqs -B liboqs/build \
     -DBUILD_SHARED_LIBS=ON \
     -DOQS_BUILD_ONLY_LIB=ON \
     -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_INSTALL_PREFIX="$CONDA_PREFIX"
+    -DCMAKE_INSTALL_PREFIX="${CONDA_PREFIX:-$VIRTUAL_ENV}"
 
 cmake --build liboqs/build --parallel 8
 
