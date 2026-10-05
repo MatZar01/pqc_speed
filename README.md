@@ -36,6 +36,13 @@ conda create -n pqc-speed python=3.11 cmake git pip -c conda-forge
 conda activate pqc-speed
 ```
 
+Alternatively, you can use `venv` module
+
+```bash
+python -m venv ~/pqc-speed python=3.11
+source ~/pqc-speed/bin/activate
+```
+
 Build and install `liboqs` into that environment:
 
 ```bash
@@ -48,7 +55,7 @@ Install the Python dependencies:
 pip install liboqs-python cryptography
 ```
 
-The install script expects `CONDA_PREFIX` to be set, so run it only after
+The install script expects `CONDA_PREFIX` or `VIRTUAL_ENV` to be set, so run it only after
 activating the environment.
 
 ## Usage
